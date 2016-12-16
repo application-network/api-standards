@@ -9,10 +9,19 @@ types:
       version:
         type: number
       createdOn:
-        type: date
+        type: datetime
       updatedOn:
-        type: date
+        type: datetime
       createdBy:
         type: string
       updatedBy:
         type: string 
+    
+  period:
+    type: object
+    properties:
+      startDate:
+        type: date-only
+      endDate:
+        type: date-only
+  
