@@ -1,29 +1,27 @@
 #%RAML 1.0 ResourceType
 
-collection:
-     usage: Apply this resourceType to a collection resource and redefine the methods which you wish to inherit.
-     description: This resourceType defines the GET, POST methods for a collection resource.
-     get:
-       description: Retrieves a list of all <<itemPathName>> in the collection.
-       responses:
-          200:
-           body:
-             application/json:
-               schema: <<itemPathName>>
-          500:
-           description: Server side error.
-     post?:         
-       description: Creates a new <<itemPathName>>.
-       body:
-         application/json:
-           schema: <<itemPathName>>
-       responses :
-          201:
-            description : The resource has successfully been created.
-          400:
-            description: Request incorrect.
-          409:
-            description: Conflict with another resource.
-          500:
-            description: Server side error.
-            
+usage: Apply this resourceType to a collection resource and redefine the methods which you wish to inherit.
+description: This resourceType defines the GET, POST methods for a collection resource.
+get:
+  description: Retrieves a list of all <<itemPathName>> in the collection.
+  responses:
+    200:
+      body:
+        application/json:
+          schema: <<itemPathName>>
+    500:
+      description: Server side error.
+post?:
+  description: Creates a new <<itemPathName>>.
+  body:
+    application/json:
+      schema: <<itemPathName>>
+  responses :
+    201:
+      description : The resource has successfully been created.
+    400:
+      description: Request incorrect.
+    409:
+      description: Conflict with another resource.
+    500:
+      description: Server side error.''
