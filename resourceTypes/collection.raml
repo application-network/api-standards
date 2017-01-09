@@ -9,6 +9,7 @@ get:
       body:
         application/json:
           schema: <<itemPathName>>
+          example: <<getExample>>
     500:
       description: Server side error.
 post?:
@@ -16,6 +17,7 @@ post?:
   body:
     application/json:
       schema: <<itemPathName>>
+      example: <<postExample>>
   responses :
     201:
       description : The resource has successfully been created.
